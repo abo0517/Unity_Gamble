@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class SceneChanger : MonoBehaviour
 {
+    public Text TimerText;
+
     public Canvas MainCanvas;
-    public Canvas Canvas;
     public Canvas RoomCanvas;
     public Canvas CasinoCanvas;
     public Canvas BankCanvas;
@@ -29,10 +30,10 @@ public class SceneChanger : MonoBehaviour
         //카지노 입장시 시계 안보이게 함
         if (casinoState == true)
         {
-            Canvas.gameObject.SetActive(false);
+            TimerText.gameObject.SetActive(false);
         }
 
-        else {Canvas.gameObject.SetActive(true);}
+        else {TimerText.gameObject.SetActive(true);}
     }
 
     //버튼 함수들

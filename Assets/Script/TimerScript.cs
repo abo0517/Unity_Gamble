@@ -14,7 +14,8 @@ public class TimerScript : MonoBehaviour
 
     void Start()
     {
-
+        //시간 조절
+        Time.timeScale = 0.05f;
     }
 
     void Update()
