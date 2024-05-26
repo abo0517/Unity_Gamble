@@ -1504,7 +1504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00:00
+  m_Text: "0\uC77C 00:00"
 --- !u!222 &749226215
 CanvasRenderer:
   m_ObjectHideFlags: 0
