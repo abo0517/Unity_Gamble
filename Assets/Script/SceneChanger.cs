@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SceneChanger : MonoBehaviour
+{
+    public Canvas MainCanvas;
+    public Canvas Canvas;
+    public Canvas RoomCanvas;
+    public Canvas CasinoCanvas;
+    public Canvas BankCanvas;
+    public Canvas MineCanvas;
+
+    //카지노 입장 상태 true = 입장 / false = 퇴장 -> Exit에 퇴장 묶었음 그냥
+    bool casinoState = false;
+
+    void Start()
+    {
+        MainCanvas.gameObject.SetActive(false);
+        RoomCanvas.gameObject.SetActive(true);
+        CasinoCanvas.gameObject.SetActive(false);
+        BankCanvas.gameObject.SetActive(false);
+        MineCanvas.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        //카지노 입장시 시계 안보이게 함
+        if (casinoState == true)
+        {
+            Canvas.gameObject.SetActive(false);
+        }
+
+        else {Canvas.gameObject.SetActive(true);}
+    }
+
+    //버튼 함수들
+    public void RoomButton()
+    {
+        RoomCanvas.gameObject.SetActive(true);
+        MainCanvas.gameObject.SetActive(false);
+    }
+
+    public void CasinoButton()
+    {
+        casinoState = true;
+        CasinoCanvas.gameObject.SetActive(true);
+        MainCanvas.gameObject.SetActive(false);
+    }
+
+    public void BankButton()
+    {
+        BankCanvas.gameObject.SetActive(true);
+        MainCanvas.gameObject.SetActive(false);
+    }
+
+    public void MineButton()
+    {
+        MineCanvas.gameObject.SetActive(true);
+        MainCanvas.gameObject.SetActive(false);
+    }
+
+    public void ExitButton()
+    {
+        MainCanvas.gameObject.SetActive(true);
+        RoomCanvas.gameObject.SetActive(false);
+        CasinoCanvas.gameObject.SetActive(false);
+        BankCanvas.gameObject.SetActive(false);
+        MineCanvas.gameObject.SetActive(false);
+
+        casinoState = false;
+    }
+}
