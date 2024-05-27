@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ef6a5aac4d14cb4daef8aed69c0a518
+guid: 9133529c749944818923c0dffdeb4c22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8464585293342793989
-    second: "mineral - \uBCF5\uC0AC\uBCF8_0"
+      213: 5498765254763439365
+    second: outdoors_street_urban_city_Japan_Tokyo_building_signs-24518.jpg!d_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "mineral - \uBCF5\uC0AC\uBCF8_0"
+      name: outdoors_street_urban_city_Japan_Tokyo_building_signs-24518.jpg!d_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 262
-        height: 218
+        width: 1600
+        height: 1059
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50161bc1a7f387570800000000000000
-      internalID: 8464585293342793989
+      spriteID: 5056f619dd98f4c40800000000000000
+      internalID: 5498765254763439365
       vertices: []
       indices: 
       edges: []
@@ -157,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "mineral - \uBCF5\uC0AC\uBCF8_0": 8464585293342793989
+      outdoors_street_urban_city_Japan_Tokyo_building_signs-24518.jpg!d_0: 5498765254763439365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
