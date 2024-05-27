@@ -16,12 +16,12 @@ public class TimerScript : MonoBehaviour
     void Start()
     {
         // 게임의 하루 = 현실의 6분,     게임의 1시간 = 현실의 15초,        min += 4
-        InvokeRepeating("RunTime", 1, 1);
+        InvokeRepeating("RunTime", 1.25f, 1.25f);
     }
 
     void RunTime()
     {
-        min += 4;
+        min += 5;
         if (min >= 60)
         {
             min = 0;
