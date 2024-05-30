@@ -28,9 +28,9 @@ public class GameState : MonoBehaviour
         Debug.Log(money);
     }
 
-    void StateTextUpdate()
+    public void StateTextUpdate()
     {
-        HpText.text = "HP : " + hp;
-        MoneyText.text = "Money : " + money;
+        HpText.text = "체력 : " + hp + " / 100";
+        MoneyText.text = "돈 : " + money + "원";
     }
 }
