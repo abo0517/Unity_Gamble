@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     GameObject obj;
-    public Text TimeText;
+    public Text Time_Text;
+    public Text Interest_Text;
     public int day = 0;
     public int hour = 0;
     public int min = 0;
+    public int left_day = 7;
 
     //외부 스크립트에서 수정 못하게할때
     //[SerializeField]
@@ -28,6 +30,7 @@ public class TimerScript : MonoBehaviour
         {
             min -= 60;
             hour++;
+            // 1시간마다 체력 -1
             obj.GetComponent<GameState>().hp--;
             if (obj.GetComponent<GameState>().hp <= 0){
                 Game_Over();
@@ -36,9 +39,16 @@ public class TimerScript : MonoBehaviour
         if (hour >= 24){
             hour -= 24;
             day++;
+            left_day--;
+        }
+        // 이자 발생
+        if (left_day <= 0){
+            left_day = 7;
+            
         }
 
-        TimeText.text = string.Format("{0}일 {1:D2}:{2:D2}", day, hour, min);
+        Time_Text.text = string.Format("{0}일 {1:D2}:{2:D2}", day, hour, min);
+        Interest_Text.text = string.Format("이자까지 남은 일 : {0}일", left_day);
     }
     
     void Game_Over(){
