@@ -19,7 +19,7 @@ public class Bank : MonoBehaviour
     public Text CoinPosition1;
     public Text CoinPosition2;
 
-    int coin1 = 10000000;
+    int coin1 = 100000;
     int coin2 = 100000;
     int coinPosition1 = 0;
     int coinPosition2 = 0;

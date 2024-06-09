@@ -33,7 +33,6 @@ public class GameState : MonoBehaviour
     public void Message_Update(string msg, int time){
         Canvas.transform.Find("상단").gameObject.SetActive(true);
         Message.text = "" + msg;
-        CancelInvoke("Message_cancle");
         Invoke("Message_cancle", time);
     }
     void Message_cancle(){
