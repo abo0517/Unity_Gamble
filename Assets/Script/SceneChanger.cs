@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class SceneChanger : MonoBehaviour
 {
-    public Text TimerText;
+    public Image Timer_UI;
 
     public Canvas Canvas;
     public Canvas MainCanvas;
     public Canvas RoomCanvas;
     public Canvas CasinoCanvas;
+    public Canvas GameCanvas;
     public Canvas BankCanvas;
     public Canvas MineCanvas;
     public Canvas StoryCanvas;
@@ -40,10 +41,10 @@ public class SceneChanger : MonoBehaviour
         //카지노 입장시 시계 안보이게 함
         if (casinoState == true)
         {
-            TimerText.gameObject.SetActive(false);
+            Timer_UI.gameObject.SetActive(false);
         }
 
-        else {TimerText.gameObject.SetActive(true);}
+        else {Timer_UI.gameObject.SetActive(true);}
     }
 
     //버튼 함수들
@@ -104,6 +105,47 @@ public class SceneChanger : MonoBehaviour
         }
     }
 
+    public void Game_Btn(string Game_name){
+        CasinoCanvas.gameObject.SetActive(false);
+        GameCanvas.gameObject.SetActive(true);
+        switch(Game_name)
+        {
+            case "BlackJack":
+                GameCanvas.transform.Find("BlackJack").gameObject.SetActive(true);
+                GameCanvas.transform.Find("Racing").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Ladder").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Roullete").gameObject.SetActive(false);
+                break;
+
+            case "Racing":
+                GameCanvas.transform.Find("BlackJack").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Racing").gameObject.SetActive(true);
+                GameCanvas.transform.Find("Ladder").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Roullete").gameObject.SetActive(false);
+                break;
+                
+            case "Ladder":
+                GameCanvas.transform.Find("BlackJack").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Racing").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Ladder").gameObject.SetActive(true);
+                GameCanvas.transform.Find("Roullete").gameObject.SetActive(false);
+                break;
+                
+            case "Roullete":
+                GameCanvas.transform.Find("BlackJack").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Racing").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Ladder").gameObject.SetActive(false);
+                GameCanvas.transform.Find("Roullete").gameObject.SetActive(true);
+                break;
+
+        }
+    }
+    public void Game_Exit_Btn(string Game_name){
+        CasinoCanvas.gameObject.SetActive(true);
+        GameCanvas.gameObject.SetActive(false);
+        GameCanvas.transform.Find(Game_name).gameObject.SetActive(false);
+    }
+    
     public void CoinButton()
     {
         IOCanvas.gameObject.SetActive(false);
