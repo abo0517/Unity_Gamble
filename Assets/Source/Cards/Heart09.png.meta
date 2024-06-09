@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c836f4f40da4c64ebd5cf43ae0f80f3
+guid: 3ef19fb98bce74a48b277d5ac36ababc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2914817870989360408
-    second: bank_bg_0
+      213: -936582567785874895
+    second: Heart09_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bank_bg_0
+      name: Heart09_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 27
-        width: 600
-        height: 1227
+        x: 395
+        y: 58
+        width: 1252
+        height: 1937
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81df7490963837820800000000000000
-      internalID: 2914817870989360408
+      spriteID: 13abc48ed179003f0800000000000000
+      internalID: -936582567785874895
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bank_bg_0: 2914817870989360408
+      Heart09_0: -936582567785874895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

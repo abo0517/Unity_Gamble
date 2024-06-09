@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c836f4f40da4c64ebd5cf43ae0f80f3
+guid: e7911eba35b428243b3ac55d2f0ae830
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2914817870989360408
-    second: bank_bg_0
+      213: -7564227227535241447
+    second: Diamond06_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bank_bg_0
+      name: Diamond06_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 27
-        width: 600
-        height: 1227
+        x: 395
+        y: 58
+        width: 1252
+        height: 1937
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81df7490963837820800000000000000
-      internalID: 2914817870989360408
+      spriteID: 91f8c6ed967760790800000000000000
+      internalID: -7564227227535241447
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bank_bg_0: 2914817870989360408
+      Diamond06_0: -7564227227535241447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
