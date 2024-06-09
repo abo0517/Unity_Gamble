@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class SceneChanger : MonoBehaviour
 {
     public Image Timer_UI;
-
+    public GameObject GameManager;
     public Canvas Canvas;
     public Canvas MainCanvas;
     public Canvas RoomCanvas;
     public Canvas CasinoCanvas;
     public Canvas GameCanvas;
+    public Canvas Betting_Canvas;
     public Canvas BankCanvas;
     public Canvas MineCanvas;
     public Canvas StoryCanvas;
@@ -28,6 +29,7 @@ public class SceneChanger : MonoBehaviour
         MainCanvas.gameObject.SetActive(false);
         RoomCanvas.gameObject.SetActive(false);
         CasinoCanvas.gameObject.SetActive(false);
+        GameCanvas.gameObject.SetActive(false);
         BankCanvas.gameObject.SetActive(false);
         MineCanvas.gameObject.SetActive(false);
         Canvas.gameObject.SetActive(false);
@@ -137,8 +139,10 @@ public class SceneChanger : MonoBehaviour
                 GameCanvas.transform.Find("Ladder").gameObject.SetActive(false);
                 GameCanvas.transform.Find("Roullete").gameObject.SetActive(true);
                 break;
-
         }
+
+        Betting_Canvas.GetComponent<Betting>().game_name = Game_name;
+        Betting_Canvas.GetComponent<Betting>().setting_betting();
     }
     public void Game_Exit_Btn(string Game_name){
         CasinoCanvas.gameObject.SetActive(true);

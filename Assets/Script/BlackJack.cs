@@ -19,21 +19,7 @@ public class BlackJack : MonoBehaviour
     List<int> Dealer_list = new List<int>();
     List<int> Player_list = new List<int>();
 
-    public void setting(){
-        Betting_Canvas.gameObject.SetActive(true);
-        if(GameManager.GetComponent<GameState>().money < int.Parse(Betting_money.text)){
-            Betting_Text.text = "소지금이 부족합니다.";
-        }
-        else{
-            Betting_Text.text = string.Format("{0}원 만큼 배팅이 되었습니다.", Betting_money.text);
-            GameManager.GetComponent<GameState>().money -= int.Parse(Betting_money.text);
-            GameManager.GetComponent<GameState>().Message_Update(Betting_Text.text, 2);
-            Betting_Canvas.gameObject.SetActive(false);
-            start_game();
-        }
-    }
-
-    void start_game(){
+    public void start_game(){
         BlackJack_Canvas.transform.Find("Game_Btn").gameObject.SetActive(true);
         Defualt_Card_Set();
     }
@@ -155,14 +141,13 @@ public class BlackJack : MonoBehaviour
         Player_list = new List<int>();
         DestroyClone("Clone");
     }
-    public void DestroyClone(string str)
-{
+    public void DestroyClone(string str){
      GameObject[] clone = GameObject.FindGameObjectsWithTag(str);
 
      for (int i = 0; i < clone.Length; i++)
      {
           Destroy(clone[i]);
      }
-}
+    }
 }
 
