@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class GameState : MonoBehaviour
 {
     public int hp = 100;
-    public int money = 0;
+    public int money = 1000000;
 
     public Text HpText;
     public Text MoneyText;
+    public Text Message;
+    public Canvas Canvas;
 
     void Start()
     {
@@ -21,16 +23,18 @@ public class GameState : MonoBehaviour
         StateTextUpdate();
     }
 
-    //광질 함수 -> 버튼에 연결 해놨음
-    public void Mining()
-    {
-        money++;
-        Debug.Log(money);
-    }
-
     public void StateTextUpdate()
     {
         HpText.text = "체력 : " + hp + " / 100";
-        MoneyText.text = "돈 : " + money + "원";
+        MoneyText.text = string.Format("돈 : {0:N0} 원", money);
+    }
+    
+    public void Message_Update(string msg, int time){
+        Canvas.transform.Find("상단").gameObject.SetActive(true);
+        Message.text = "" + msg;
+        Invoke("Message_cancle", time);
+    }
+    void Message_cancle(){
+        Canvas.transform.Find("상단").gameObject.SetActive(false);
     }
 }

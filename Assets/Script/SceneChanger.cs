@@ -7,11 +7,14 @@ public class SceneChanger : MonoBehaviour
 {
     public Text TimerText;
 
+    public Canvas Canvas;
     public Canvas MainCanvas;
     public Canvas RoomCanvas;
     public Canvas CasinoCanvas;
     public Canvas BankCanvas;
     public Canvas MineCanvas;
+    public Canvas StoryCanvas;
+    int idx = 1;
 
     //카지노 입장 상태 true = 입장 / false = 퇴장 -> Exit에 퇴장 묶었음 그냥
     bool casinoState = false;
@@ -19,10 +22,12 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         MainCanvas.gameObject.SetActive(false);
-        RoomCanvas.gameObject.SetActive(true);
+        RoomCanvas.gameObject.SetActive(false);
         CasinoCanvas.gameObject.SetActive(false);
         BankCanvas.gameObject.SetActive(false);
         MineCanvas.gameObject.SetActive(false);
+        Canvas.gameObject.SetActive(false);
+        StoryCanvas.gameObject.SetActive(true);
     }
 
     void Update()
@@ -71,5 +76,24 @@ public class SceneChanger : MonoBehaviour
         MineCanvas.gameObject.SetActive(false);
 
         casinoState = false;
+    }
+
+    public void Next_Btn(){
+        if(idx == 1){
+            StoryCanvas.transform.Find("image_1").gameObject.SetActive(false);
+            StoryCanvas.transform.Find("image_2").gameObject.SetActive(true);
+            idx++;
+        }
+        else if(idx == 2){
+            StoryCanvas.transform.Find("image_2").gameObject.SetActive(false);
+            StoryCanvas.transform.Find("image_3").gameObject.SetActive(true);
+            idx++;
+        }
+        else if(idx == 3){
+            StoryCanvas.transform.Find("image_3").gameObject.SetActive(false);
+            RoomCanvas.gameObject.SetActive(true);
+            Canvas.gameObject.SetActive(true);
+            StoryCanvas.gameObject.SetActive(false);
+        }
     }
 }
