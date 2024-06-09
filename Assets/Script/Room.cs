@@ -20,13 +20,13 @@ public class Room : MonoBehaviour
         obj.GetComponent<GameState>().Message_Update("8시간동안 잠을 자서 체력 20 회복", 2);
     }
 
-    // 음식 먹기 버튼 누르면 10만원 써서 체력 2 회복
+    // 음식 먹기 버튼 누르면 10만원 써서 체력 5 회복
     public void Food_button(){
         obj.GetComponent<GameState>().money -= 100000;
-        obj.GetComponent<GameState>().hp += 2;
+        obj.GetComponent<GameState>().hp += 5;
         if(obj.GetComponent<GameState>().hp >= 100){
             obj.GetComponent<GameState>().hp = 100;
         }
-        obj.GetComponent<GameState>().Message_Update("10만원을 사용하여 체력 2 회복", 2);
+        obj.GetComponent<GameState>().Message_Update("10만원을 사용하여 체력 5 회복", 2);
     }
 }
