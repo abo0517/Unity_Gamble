@@ -46,7 +46,7 @@ public class TimerScript : MonoBehaviour
         // 이자 발생
         if (left_day <= 0){
             left_day = 7;
-            
+            obj.GetComponent<Bank>().Interest();
         }
 
         Time_Text.text = string.Format("{0}일 {1:D2}:{2:D2}", day, hour, min);
