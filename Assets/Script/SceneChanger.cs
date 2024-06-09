@@ -14,6 +14,9 @@ public class SceneChanger : MonoBehaviour
     public Canvas BankCanvas;
     public Canvas MineCanvas;
     public Canvas StoryCanvas;
+
+    public Canvas IOCanvas;
+    public Canvas CoinCanvas;
     int idx = 1;
 
     //카지노 입장 상태 true = 입장 / false = 퇴장 -> Exit에 퇴장 묶었음 그냥
@@ -28,6 +31,8 @@ public class SceneChanger : MonoBehaviour
         MineCanvas.gameObject.SetActive(false);
         Canvas.gameObject.SetActive(false);
         StoryCanvas.gameObject.SetActive(true);
+        IOCanvas.gameObject.SetActive(false);
+        CoinCanvas.gameObject.SetActive(false);
     }
 
     void Update()
@@ -58,6 +63,8 @@ public class SceneChanger : MonoBehaviour
     public void BankButton()
     {
         BankCanvas.gameObject.SetActive(true);
+        IOCanvas.gameObject.SetActive(true);
+        CoinCanvas.gameObject.SetActive(false);
         MainCanvas.gameObject.SetActive(false);
     }
 
@@ -95,5 +102,17 @@ public class SceneChanger : MonoBehaviour
             Canvas.gameObject.SetActive(true);
             StoryCanvas.gameObject.SetActive(false);
         }
+    }
+
+    public void CoinButton()
+    {
+        IOCanvas.gameObject.SetActive(false);
+        CoinCanvas.gameObject.SetActive(true);
+    }
+
+    public void IOButton()
+    {
+        IOCanvas.gameObject.SetActive(true);
+        CoinCanvas.gameObject.SetActive(false);
     }
 }

@@ -7,7 +7,8 @@ public class GameState : MonoBehaviour
 {
     public int hp = 100;
     public int money = 1000000;
-
+    public int debt = -100000000;
+    public int bankAccount = 0;
     public Text HpText;
     public Text MoneyText;
     public Text Message;

@@ -32,6 +32,7 @@ public class TimerScript : MonoBehaviour
             hour++;
             // 1시간마다 체력 -1
             obj.GetComponent<GameState>().hp--;
+            obj.GetComponent<Bank>().RandomPrice();
             if (obj.GetComponent<GameState>().hp <= 0){
                 Game_Over();
             }
@@ -40,6 +41,7 @@ public class TimerScript : MonoBehaviour
             hour -= 24;
             day++;
             left_day--;
+            
         }
         // 이자 발생
         if (left_day <= 0){

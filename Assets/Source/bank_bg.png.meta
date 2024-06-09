@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec598ba7f3c635844a5fe3a157f132be
+guid: 8c836f4f40da4c64ebd5cf43ae0f80f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6866811130397798388
-    second: Racing_0
+      213: 2914817870989360408
+    second: bank_bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Racing_0
+      name: bank_bg_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
-        width: 256
-        height: 219
+        x: 19
+        y: 27
+        width: 600
+        height: 1227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c00d0f8a8af24b0a0800000000000000
-      internalID: -6866811130397798388
+      spriteID: 81df7490963837820800000000000000
+      internalID: 2914817870989360408
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Racing_0: -6866811130397798388
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
