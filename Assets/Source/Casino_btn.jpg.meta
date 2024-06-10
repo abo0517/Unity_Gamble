@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Casino_btn_0: 1211307944816333435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

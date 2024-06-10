@@ -91,17 +91,17 @@ public class SceneChanger : MonoBehaviour
 
     public void Next_Btn(){
         if(idx == 1){
-            StoryCanvas.transform.Find("image_1").gameObject.SetActive(false);
-            StoryCanvas.transform.Find("image_2").gameObject.SetActive(true);
+            StoryCanvas.transform.Find("Image_1").gameObject.SetActive(false);
+            StoryCanvas.transform.Find("Image_2").gameObject.SetActive(true);
             idx++;
         }
         else if(idx == 2){
-            StoryCanvas.transform.Find("image_2").gameObject.SetActive(false);
-            StoryCanvas.transform.Find("image_3").gameObject.SetActive(true);
+            StoryCanvas.transform.Find("Image_2").gameObject.SetActive(false);
+            StoryCanvas.transform.Find("Image_3").gameObject.SetActive(true);
             idx++;
         }
         else if(idx == 3){
-            StoryCanvas.transform.Find("image_3").gameObject.SetActive(false);
+            StoryCanvas.transform.Find("Image_3").gameObject.SetActive(false);
             RoomCanvas.gameObject.SetActive(true);
             Canvas.gameObject.SetActive(true);
             StoryCanvas.gameObject.SetActive(false);
