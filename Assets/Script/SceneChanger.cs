@@ -19,6 +19,7 @@ public class SceneChanger : MonoBehaviour
 
     public Canvas IOCanvas;
     public Canvas CoinCanvas;
+    public Text inf_text;
     int idx = 1;
 
     //카지노 입장 상태 true = 입장 / false = 퇴장 -> Exit에 퇴장 묶었음 그냥
@@ -117,6 +118,7 @@ public class SceneChanger : MonoBehaviour
                 GameCanvas.transform.Find("Racing").gameObject.SetActive(false);
                 GameCanvas.transform.Find("Ladder").gameObject.SetActive(false);
                 GameCanvas.transform.Find("Roullete").gameObject.SetActive(false);
+                inf_text.text = "이길 시 배팅금 X 2 , 패배 시 배팅금 X 0.5";
                 break;
 
             case "Racing":
@@ -124,6 +126,7 @@ public class SceneChanger : MonoBehaviour
                 GameCanvas.transform.Find("Racing").gameObject.SetActive(true);
                 GameCanvas.transform.Find("Ladder").gameObject.SetActive(false);
                 GameCanvas.transform.Find("Roullete").gameObject.SetActive(false);
+                inf_text.text = "1등 3배, 2등 1.5배, 3등 0배";
                 break;
                 
             case "Ladder":
@@ -131,6 +134,7 @@ public class SceneChanger : MonoBehaviour
                 GameCanvas.transform.Find("Racing").gameObject.SetActive(false);
                 GameCanvas.transform.Find("Ladder").gameObject.SetActive(true);
                 GameCanvas.transform.Find("Roullete").gameObject.SetActive(false);
+                inf_text.text = "이길 시 배팅금 X 2 , 패배 시 배팅금 X 0.5";
                 break;
                 
             case "Roullete":

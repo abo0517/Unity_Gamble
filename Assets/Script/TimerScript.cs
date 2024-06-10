@@ -8,6 +8,7 @@ public class TimerScript : MonoBehaviour
     GameObject obj;
     public Text Time_Text;
     public Text Interest_Text;
+    public Text Debt_text;
     public int day = 0;
     public int hour = 0;
     public int min = 0;
@@ -46,7 +47,10 @@ public class TimerScript : MonoBehaviour
         // 이자 발생
         if (left_day <= 0){
             left_day = 7;
-            
+            obj.GetComponent<Bank>().Interest();
+            double interest = obj.GetComponent<GameState>().debt * 0.02;
+            obj.GetComponent<GameState>().debt += (int)interest;
+            Debt_text.text = string.Format("{0:N0}", obj.GetComponent<GameState>().debt);
         }
 
         Time_Text.text = string.Format("{0}일 {1:D2}:{2:D2}", day, hour, min);
@@ -54,6 +58,7 @@ public class TimerScript : MonoBehaviour
     }
     
     void Game_Over(){
-        Debug.Log("Game Over");
+        obj.GetComponent<GameState>().money /= 2;
+        obj.GetComponent<GameState>().hp += 2;
     }
 }

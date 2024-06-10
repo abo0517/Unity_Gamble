@@ -49,7 +49,6 @@ public class Bank : MonoBehaviour
         else
         {
             CoinCount1.text = "염소코인 : " + this.Countcoin1;
-            obj.GetComponent<GameState>().money += coinPosition1;
             coinPosition1 = 0;
             CoinPosition1.text = string.Format("KRW : {0:N0}", this.coinPosition1);
         }
@@ -65,12 +64,25 @@ public class Bank : MonoBehaviour
         else
         {
             CoinCount2.text = "샤카밤바코인 : " + this.Countcoin2;
-            obj.GetComponent<GameState>().money += coinPosition2;
             coinPosition2 = 0;
             CoinPosition2.text = string.Format("KRW : {0:N0}", this.coinPosition2);
         }
     }
+    public void Interest()
+    {
+        int bankAccountBalance = obj.GetComponent<GameState>().bankAccount;
 
+        double interest = bankAccountBalance * 0.02;
+
+        int interestAsInt = (int)interest;
+
+        int newBalance = bankAccountBalance + interestAsInt;
+
+        obj.GetComponent<GameState>().bankAccount = newBalance;
+
+        Account_text.text = string.Format("{0:N0}",
+        obj.GetComponent<GameState>().bankAccount);
+    }
     //코인 가격 변수
     public void RandomPrice()
     {

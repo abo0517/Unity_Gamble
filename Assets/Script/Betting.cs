@@ -37,7 +37,7 @@ public class Betting : MonoBehaviour
                 break;
             
             case "Racing":
-
+                //GameCanvas.GetComponent<Racing>().start_game();
                 break;
             
             case "Ladder":

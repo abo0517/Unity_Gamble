@@ -13,7 +13,6 @@ public class Ladder : MonoBehaviour
     public InputField Betting_money;
     public Text Betting_Text;
     public Canvas Betting_Canvas;
-    bool a, b;
     public void start_game(){
         DestroyClone("Clone");
         create_line();
@@ -41,14 +40,10 @@ public class Ladder : MonoBehaviour
         switch(idx)
         {
             case 0:
-                a = true;
-                b = false;
                 Result_1_text.text = "성공";
                 Result_2_text.text = "실패";
                 break;
             case 1:
-                a = false;
-                b = true;
                 Result_1_text.text = "실패";
                 Result_2_text.text = "성공";
                 break;
